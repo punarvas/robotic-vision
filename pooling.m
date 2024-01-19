@@ -1,24 +1,16 @@
-% 2x2 image resize that halves the dimensions
+% Highlight common background color
 % clear
 clear;
 
 % Read the image
 path = "gallary/sample.jpg";
 image = imread(path);
-[height, width, channel] = size(image);
 
-filter = ones(3) / 3^2;
-pooled_image = zeros(height, width, channel);
-
-for row = 2:width-1
-    for col = 2:height-1
-        for c = 1:channel
-            slice = double(image(row-1:row+1, col-1:col+1, c));
-            filtered = mean(dot(slice, filter));
-            pooled_image(row, col, c) = uint8(filtered);
-        end
-    end
-end
+highlightedImage5 = highlight(image, 5);
+highlightedImage25 = highlight(image, 25);
+highlightedImage75 = highlight(image, 75);
 
 % visualize
-imshow(pooled_image), title("Pooled image");
+subplot(1, 3, 1), imshow(highlightedImage5), title("Intensity 5");
+subplot(1, 3, 2), imshow(highlightedImage25), title("Intensity 25");
+subplot(1, 3, 3), imshow(highlightedImage75), title("Intensity 75");
