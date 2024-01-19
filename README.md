@@ -15,5 +15,5 @@ Practice so far...
 ![Image convolutional filters](output//convolution_filter.png)
 
 **4. Image highligting (pooling.m and highlight.m)**
-- Showing those pixels which are highly bright. With appropriate parameters, this method can reveal the direction of sunlight on the surface.
+- Showing those pixels which are highly bright. With appropriate parameters, this method can reveal the concentration of surface light.
 ![Image highlighting](output//highlighting.png)
