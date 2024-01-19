@@ -13,3 +13,7 @@ Practice so far...
 **3. Convolution filters (convolution.m)**
 - 2D convolution operation with various pre-defined filters can manipulate image.
 ![Image convolutional filters](output//convolution_filter.png)
+
+**4. Image highligting (pooling.m and highlight.m)**
+- Showing those pixels which are highly bright. With appropriate parameters, this method can reveal the direction of sunlight on the surface.
+![Image highlighting](output//highlighting.png)
