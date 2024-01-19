@@ -7,5 +7,9 @@ Practice so far...
 ![Grayscale Image Conversion](output//weighted_grayscale_conversion.png)
 
 **2. Horizontal and Vertical image flipping**
-- No built-in method used. Created loops to flip images both vertically and horizontally-
+- No built-in method used. Created loops to flip images both vertically and horizontally.
 ![Image vertical and horizontal flip](output//flipping.png)
+
+**3. Convolution filters**
+- 2D convolution operation with various pre-defined filters can manipulate image.
+![Image convolutional filters](output//convolution_filter.png)
