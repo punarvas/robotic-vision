@@ -14,6 +14,6 @@ Practice so far...
 - 2D convolution operation with various pre-defined filters can manipulate image.
 ![Image convolutional filters](output//convolution_filter.png)
 
-**4. Image highligting (pooling.m and highlight.m)**
+**4. Image highligting (highlight_images.m and highlight.m)**
 - Showing those pixels which are highly bright. With appropriate parameters, this method can reveal the concentration of surface light.
 ![Image highlighting](output//highlighting.png)
