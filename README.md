@@ -23,5 +23,5 @@ Projects
 I worked on some projects as I go into the MATLAB to get more closer experience of writing Computer Vision ML programs.
 
 **1. Handwritten Digit Recognition (projects/handwritten_digit_recognition)**
-- Created a one-vs-all SVM model for classification of MNIST digit classification problem.
+- Created a one-vs-all SVM model for classification of MNIST digits dataset.
 - The model shows 94.30% test accuracy. Concepts learned: functions, MATLAB ML Toolkit, SVM FITCECOC function, creating custom evaluation like accuracy, CONFUSIONMAT function. 
