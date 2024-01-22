@@ -36,3 +36,12 @@ predictions = predict(model, X_test)';
 % disp(size(predictions));
 accuracy = sum(predictions == Y_test) / numel(Y_test);
 disp(["System accuracy" num2str(accuracy * 100)]);
+
+
+% Confusion matrix
+% Create confusion matrix
+C = confusionmat(Y_test, predictions);
+
+% Display confusion matrix
+disp('Confusion Matrix:');
+disp(C);
