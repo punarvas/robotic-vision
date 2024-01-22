@@ -17,3 +17,11 @@ Practice so far...
 **4. Image highligting (highlight_images.m and highlight.m)**
 - Showing those pixels which are highly bright. With appropriate parameters, this method can reveal the concentration of surface light.
 ![Image highlighting](output//highlighting.png)
+
+Projects
+---
+I worked on some projects as I go into the MATLAB to get more closer experience of writing Computer Vision ML programs.
+
+**1. Handwritten Digit Recognition (projects/handwritten_digit_recognition)**
+- Created a one-vs-all SVM model for classification of MNIST digit classification problem.
+- The model shows 94.30% test accuracy. Concepts learned: functions, MATLAB ML Toolkit, SVM FITCECOC function, creating custom evaluation like accuracy, CONFUSIONMAT function. 
