@@ -23,4 +23,16 @@ Y_train = Y(1:range);
 Y_test = Y(range+1:end);
 
 % Fit multi-class SVM model
-model = fitcecoc(X_train, Y_train, "Coding", "onevsall", "Verbose", true);
+% model = fitcecoc(X_train, Y_train, "Coding", "onevsall", "Verbose", true);
+
+% load model
+load("model.mat");
+
+% predict
+predictions = predict(model, X_test)';
+
+% Evaluate the model
+% disp(size(Y_test));
+% disp(size(predictions));
+accuracy = sum(predictions == Y_test) / numel(Y_test);
+disp(["System accuracy" num2str(accuracy * 100)]);
