@@ -5,7 +5,8 @@ clear;
 addpath("functions");
 
 % Read image
-image = imread("gallary\face3.jpg");
+filename = "face2.jpg";
+image = imread(fullfile("gallary", filename));
 [height, width, ~] = size(image);
 
 chromatics = zeros(height, width, 2);
@@ -22,3 +23,4 @@ for i = 1:height
 end
 
 figure, imshow(image), title("Skin tone Chromatics");
+imwrite(image, fullfile("output", filename));
