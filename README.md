@@ -29,3 +29,4 @@ I worked on some projects as I go into the MATLAB to get more closer experience 
 **2. Simple Skin Color Detection and Masking algorithm (projects/handwritten_digit_recognition)**
 - Created a simple Skin tone detection algorithm using XY Chromaticity values and CIE 1931 chromaticity space skin tone thresholds
 - This algorithm is not perfect at this point but able to mask areas on the image with Yellow color which are highly likely the skin color pixels.
+![Skin color detection and masking](output//skin_color_detection.png)
