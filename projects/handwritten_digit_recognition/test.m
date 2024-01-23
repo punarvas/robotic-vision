@@ -36,3 +36,6 @@ C = confusionmat(Y_test, predictions);
 % Display confusion matrix
 disp('Confusion Matrix:');
 disp(C);
+
+% Use metric fuction to represent F1, Recall, and Precision 
+disp(metric(C));
