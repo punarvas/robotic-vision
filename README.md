@@ -25,3 +25,7 @@ I worked on some projects as I go into the MATLAB to get more closer experience 
 **1. Handwritten Digit Recognition (projects/handwritten_digit_recognition)**
 - Created a one-vs-all SVM model for classification of MNIST digits dataset.
 - The model shows 94.30% test accuracy. Concepts learned: functions, MATLAB ML Toolkit, SVM FITCECOC function, creating custom evaluation like accuracy, CONFUSIONMAT function. 
+
+**2. Simple Skin Color Detection and Masking algorithm (projects/handwritten_digit_recognition)**
+- Created a simple Skin tone detection algorithm using XY Chromaticity values and CIE 1931 chromaticity space skin tone thresholds
+- This algorithm is not perfect at this point but able to mask areas on the image with Yellow color which are highly likely the skin color pixels.
