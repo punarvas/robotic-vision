@@ -11,5 +11,4 @@ function highlightedImage = highlight(image, intensity)
             end
         end
     end
-
 end

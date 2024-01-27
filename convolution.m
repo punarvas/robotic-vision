@@ -3,26 +3,28 @@ clear;
 % Read the image
 path = "gallary/sample.jpg";
 image = imread(path);
-
 image = rgb2gray(image);
-no_effect = [0 0 0; 0 1 0; 0 0 0];  % Does not affect the image at all
-smoothing = ones(5) / 2^5;  % Smoothes the image
-sharpen = [0 0 0; 0 2 0; 0 0 0] - (ones(3) / 2^3);
 
-% 2D Gaussian filter
-gauss = fspecial("gaussian", [5 5], 30);
-kernel = smoothing;
+% 1. Smooth image
+kernel = ones(5) / 2^5;
+smooth_image = confil(image, kernel);
 
-filtered_image = conv2(double(image), kernel, "same");
-% convert image
-filtered_image = uint8(filtered_image);
+% 2. sharpen image
+kernel = [0 0 0; 0 2 0; 0 0 0] - (ones(3) / 2^3);
+sharp_image = confil(image, kernel);
 
-% gray outlined image
-gray_outlines = uint8(image) - filtered_image;
+% 3. lowpass filter with long sigma (Gaussian filter)
+kernel = fspecial("gaussian", [5 5], 30);
+gauss_image = confil(image, kernel);
 
-% adding back
-sharpened = image + gray_outlines;
+% Visualize
+subplot(1, 4, 1), imshow(image), title("Original image");
+subplot(1, 4, 2), imshow(smooth_image), title("Smooth image");
+subplot(1, 4, 3), imshow(sharp_image), title("Sharp image");
+subplot(1, 4, 4), imshow(gauss_image), title("Gauss image");
 
-subplot(1, 3, 1), imshow(image), title("Original image");
-subplot(1, 3, 2), imshow(gray_outlines), title("Filter output");
-subplot(1, 3, 3), imshow(sharpened), title("Filter output 2");
+
+function filtered_image = confil(image, kernel)
+    filtered_image = conv2(double(image), kernel, "same");
+    filtered_image = uint8(filtered_image);
+end
