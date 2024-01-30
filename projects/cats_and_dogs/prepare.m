@@ -6,8 +6,8 @@ clc;
 dirlist = ["PetImages\Cat\*.jpg", "PetImages\Dog\*.jpg"];
 pathlist = ["PetImages\Cat\", "PetImages\Dog\"];
 
-images = {};
-labels = {};
+images = [];
+labels = [];
 
 for c = 1:numel(dirlist)
     files = dir(dirlist(c));
@@ -25,9 +25,13 @@ for c = 1:numel(dirlist)
         % save image and corresponding label
         images = [images, image];
         labels = [labels, c-1];
-        disp(["Processed ", filename]);
     end
 end
 
 disp("Statistics on image read");
 disp(["Total images:", num2str(numel(images))]);
+
+% Save dataset
+savepath = "Dataset.mat";
+save(savepath, "images", "labels");
+disp("Images and corresponding labels stored in the Dataset.mat");
