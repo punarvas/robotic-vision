@@ -6,8 +6,8 @@ clc;
 dirlist = ["PetImages\Cat\*.jpg", "PetImages\Dog\*.jpg"];
 pathlist = ["PetImages\Cat\", "PetImages\Dog\"];
 
-images = [];
-labels = [];
+images = {};
+labels = {};
 
 for c = 1:numel(dirlist)
     files = dir(dirlist(c));
@@ -23,8 +23,9 @@ for c = 1:numel(dirlist)
         image = imresize(image, [224, 224]);
 
         % save image and corresponding label
-        images = [images, image];
-        labels = [labels, c-1];
+        images = {images, image};
+        labels = {labels, c-1};
+        disp(["Processed", filename]);
     end
 end
 
