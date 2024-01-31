@@ -13,7 +13,7 @@ valsize = 0.3;  % percentage of number of images used for test and validation
 for c = 1:numel(classes)
     files = dir(fullfile(parentfolder, classes(c), fileformat));
     for n = 1:numel(files)
-        imagepath = fullfile("PetImages", "Cat", files(i).name);
+        imagepath = fullfile("PetImages", "Cat", files(n).name);
         try
             image = imread(imagepath);
         catch
